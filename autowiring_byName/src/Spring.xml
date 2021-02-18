@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  Flipkart Bean 
+<bean id="fk" class="org.Spring.autowiring_byNameApp.FlipkartController" autowire="byName"></bean>-->
+<bean id="fk" class="org.Spring.autowiring_byNameApp.FlipkartController" autowire="byName"/>
+<!-- Dependency Beans -->
+<!--  By using byName the property name of the dependent class and the bean id must be same -->
+<!--  By using byType the class name of the dependent class and the bean class must be Matching -->
+<bean id="ec" class="org.Spring.autowiring_byNameApp.Electronics"></bean>
+<bean id="bc" class="org.Spring.autowiring_byNameApp.Electronics" autowire-candidate="false"></bean>
+<bean id="cs" class="org.Spring.autowiring_byNameApp.Cosmetics"></bean>
+<bean id="fr" class="org.Spring.autowiring_byNameApp.Furniture"></bean>
+</beans>
