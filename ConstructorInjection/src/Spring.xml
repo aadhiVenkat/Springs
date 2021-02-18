@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Engine Bean for BMW -->
+<bean id="bmw_engine" class="org.spring.ConstructorInjectionApp.Engine">
+<!-- Constructor Injection -->
+<constructor-arg name="engine_number" value="11541"></constructor-arg>
+<constructor-arg name="engine_power" value="250"></constructor-arg>
+<constructor-arg name="type" value="Petrol"></constructor-arg>
+</bean>
+
+<!-- Engine Bean for AUDI -->
+<bean id="audi_engine" class="org.spring.ConstructorInjectionApp.Engine">
+<!-- Constructor Injection -->
+<constructor-arg name="engine_number" value="78945612"></constructor-arg>
+<constructor-arg name="engine_power" value="350"></constructor-arg>
+<constructor-arg name="type" value="GAS"></constructor-arg>
+</bean>
+
+<!-- BMW Bean -->
+<bean id="bmw" class="org.spring.ConstructorInjectionApp.Bmw">
+<constructor-arg name="id" value="115544"></constructor-arg>
+<constructor-arg name="color" value="White"></constructor-arg>
+<constructor-arg name="engine" ref="bmw_engine"></constructor-arg>
+<constructor-arg name="wheels">
+<list>
+<value>Wheel1</value>
+<value>Wheel2</value>
+<value>Wheel3</value>
+<value>Wheel4</value>
+<value>Wheel5</value>
+</list>
+</constructor-arg>
+</bean>
+
+<!-- AUDI Bean -->
+<bean id="audi" class="org.spring.ConstructorInjectionApp.Audi">
+<constructor-arg name="id" value="789456"></constructor-arg>
+<constructor-arg name="color" value="Black"></constructor-arg>
+<constructor-arg name="engine" ref="audi_engine"></constructor-arg>
+<constructor-arg name="wheels">
+<list>
+<value>Wheel1</value>
+<value>Wheel2</value>
+<value>Wheel3</value>
+<value>Wheel4</value>
+<value>Wheel5</value>
+</list>
+</constructor-arg>
+</bean>
+
+
+</beans>
