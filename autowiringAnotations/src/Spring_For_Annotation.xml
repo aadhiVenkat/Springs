@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!--  Add and import property from spring-aop.jar -->
+<context:annotation-config></context:annotation-config>
+<!-- Spring AutoWiring using Annotation (byType) -->
+<!--  Flipkart Bean -->
+<bean id="fpc" class="org.spring.autowiringanotationsApp.FlipkartController"></bean>
+
+<!--  Dependency Bean -->
+<bean id="any" class="org.spring.autowiringanotationsApp.Electronics"></bean>
+<!-- <bean id="any3" class="org.spring.autowiringanotationsApp.Electronics"></bean> -->
+<bean id="any1" class="org.spring.autowiringanotationsApp.Cosmetics"></bean>
+<bean id="any2" class="org.spring.autowiringanotationsApp.Furniture"></bean>
+</beans>
